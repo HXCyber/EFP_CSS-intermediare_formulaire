@@ -1,0 +1,111 @@
+/* 1. Reset mode et arrière plan */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #ff4b2b 50%, #ffb400 100%);
+}
+
+/* 2. carte avec effet 'glow' */
+.login-card {
+    background: rgba(255, 255, 255, 0.15); 
+    padding: 60px 60px;                    
+    border-radius: 20px;                   
+    width: 360px;                          
+    height: auto;                          /* Let content define the card height dynamically */
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.5); 
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.5); 
+}
+
+/* 3. Titre et souligne */
+h2 {
+    color: white;
+    font-size: 28px;                       /* Slightly larger header */
+    margin-bottom: 5px;
+}
+
+.underline {
+    width: 80px;
+    height: 6px;
+    background: linear-gradient(90deg, #6a11cb 0%, #ff4b2b 50%, #ffb400 100%);
+    margin: 0 auto 35px auto;
+    border-radius: 2px;
+}
+
+/* 4. Formulaire et champs à remplir */
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;                           
+    align-items: center;                   /* Horizontally centers the submit button */
+}
+
+/* Base style for all input wrapper containers */
+form div, .form-group {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+label {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 8px;                    
+    font-weight: normal;                   
+    display: block;
+    align-content: center;                        
+}
+
+input {
+    width: 100%;
+    padding: 14px 22px;                    
+    margin-bottom: 0;                   
+    border-radius: 25px;                   
+    border: 3px solid white;               
+    outline: none;
+    font-size: 15px;
+    height: 48px;                          
+}
+
+/* 1. Green border when the input is filled out correctly */
+input:not(:placeholder-shown):valid {
+    border: 5px solid green !important;
+}
+
+/* 2. Red border when forbidden symbols ($ or €) are typed */
+input:not(:placeholder-shown):invalid {
+    border: 5px solid red !important;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+/* 5. Bouton submit */
+button {
+    background: #0084ff;                 
+    color: white;
+    border: none;
+    padding: 12px 0;                       
+    width: 100px;                          
+    border-radius: 10px;                   
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: normal;                   
+    margin-top: 10px;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #0066cc;             
+}
